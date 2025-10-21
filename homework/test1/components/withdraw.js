@@ -2,7 +2,7 @@ import { Button, Input } from "antd";
 import { ethers } from "ethers";
 import { use, useEffect, useState } from "react";
 import { Card } from "antd";
-const daiAddress = "0x01A01E8B862F10a3907D0fC7f47eBF5d34190341";
+const daiAddress = "0xF136927bB54709e548fC77F7ee9947b5Ef3136ff";
 const daiAbi = [
   "function depositETH() payable",
   "function withdrawAmount(uint256 _pid, address _user) view returns(uint256 requestAmount, uint256 pendingWithdrawAmount)",

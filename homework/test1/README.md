@@ -1,12 +1,3 @@
-# 质押
-
-输入质押金额
-确认
-
-# 取款
-Staked Amount
-Available to Withdraw
-Pending Withdraw
-
-输入取款金额
-确认
+1.取合约里面拿代币名称
+2.取合约里面拿精度单位
+3.获取合约的地址

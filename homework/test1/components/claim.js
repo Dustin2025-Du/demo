@@ -2,7 +2,7 @@ import { Button, Input } from "antd";
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import { Tabs } from "antd";
-const daiAddress = "0x01A01E8B862F10a3907D0fC7f47eBF5d34190341";
+const daiAddress = "0xF136927bB54709e548fC77F7ee9947b5Ef3136ff";
 const daiAbi = [
   "function stakingBalance(uint256 _pid, address _user) view returns(uint256)",
   "function claim(uint256 _pid)",
@@ -45,7 +45,7 @@ export default function  Claim({ newProvider, account }) {
       setPendingMetaNode(ethers.formatEther(pendingMetaNodeValue));
       
       console.log("质押金额:", ethers.formatEther(stAmountValue));
-      console.log("已完成节点:", ethers.formatEther(finishedMetaNodeValue));
+      console.log("奖励代币:", ethers.formatEther(finishedMetaNodeValue));
       console.log("待处理节点:", ethers.formatEther(pendingMetaNodeValue));
     } catch (error) {
       console.error("查询用户信息失败:", error);
@@ -69,11 +69,11 @@ export default function  Claim({ newProvider, account }) {
             </div>
             <div className="flex justify-between">
               <span className="font-medium">代币 (finishedMetaNode):</span>
-              <span className="text-green-600">{finishedMetaNode !== null ? `${finishedMetaNode} ETH` : '未查询'}</span>
+              <span className="text-green-600">{finishedMetaNode !== null ? `${finishedMetaNode} mntoken` : '未查询'}</span>
             </div>
             <div className="flex justify-between">
               <span className="font-medium">等待处理 (pendingMetaNode):</span>
-              <span className="text-orange-600">{pendingMetaNode !== null ? `${pendingMetaNode} ETH` : '未查询'}</span>
+              <span className="text-orange-600">{pendingMetaNode !== null ? `${pendingMetaNode} token` : '未查询'}</span>
             </div>
           </div>
         </div>
